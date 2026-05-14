@@ -1,0 +1,16 @@
+:root {
+  --bg-color: #f4f4f4;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg-color);
+  color: #1a1a1a;
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+}
+
+canvas {
+  display: block;
+  cursor: crosshair;
+}
