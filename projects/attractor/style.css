@@ -1,0 +1,231 @@
+/* ============================================
+   Attractor — Styles
+   ============================================ */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ---------- Canvas ---------- */
+#canvas-wrapper {
+  position: relative;
+  width: min(88vmin, 600px);
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+}
+
+#canvas-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ---------- Loading Overlay ---------- */
+#loading {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#loading.visible {
+  opacity: 1;
+}
+
+/* ---------- Controls Bar ---------- */
+#controls {
+  position: fixed;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(19, 19, 26, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.control-group label {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  user-select: none;
+}
+
+.control-group label span {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  min-width: 1.5em;
+  text-align: right;
+}
+
+/* Select */
+#controls select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  padding: 0.3rem 1.6rem 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-fast);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238888a0' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.4rem center;
+}
+
+#controls select:hover,
+#controls select:focus {
+  border-color: var(--color-accent);
+}
+
+/* Range */
+#controls input[type="range"] {
+  width: 80px;
+  height: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-border);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+#controls input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  transition: box-shadow var(--transition-fast);
+}
+
+#controls input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 8px rgba(124, 92, 252, 0.5);
+}
+
+/* Buttons */
+#controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+#controls button:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  background: rgba(124, 92, 252, 0.1);
+}
+
+#controls button:active {
+  transform: scale(0.92);
+}
+
+#btn-generate:hover svg {
+  animation: spin 0.5s ease;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+/* ---------- Info ---------- */
+#info {
+  position: fixed;
+  top: var(--space-lg);
+  left: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+#info .title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+#info .credit {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  #canvas-wrapper {
+    width: 92vw;
+  }
+
+  #controls {
+    bottom: var(--space-md);
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  #controls input[type="range"] {
+    width: 56px;
+  }
+
+  #info {
+    top: var(--space-md);
+    left: var(--space-md);
+  }
+}

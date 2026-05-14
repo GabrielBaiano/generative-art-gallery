@@ -1,33 +1,17 @@
 # 📸 Catálogo de Outputs
 
-Registro das imagens e vídeos gerados, organizados por nome e data.
+Registro das imagens geradas, organizadas por projeto, nome e data.
 
 ---
 
-## Como usar
+## Attractor
 
-Ao salvar uma imagem, adicione uma entrada na seção do projeto correspondente seguindo o formato:
-
-```markdown
-### Nome do Projeto
-
-| # | Preview | Arquivo | Data | Notas |
-|---|---------|---------|------|-------|
-| 1 | ![preview](images/nome-do-arquivo.png) | `nome-do-arquivo.png` | 2026-05-14 | Seed: 42, iterações: 500 |
-```
+| # | Preview | Arquivo | Paleta | Data | Notas |
+|---|---------|---------|--------|------|-------|
+| 1 | ![preview](images/attractor-neon-1778729707122.png) | `attractor-neon-1778729707122.png` | Neon | 2026-05-13 | Composição aberta, curvas divergentes |
+| 2 | ![preview](images/attractor-neon-1778729737123.png) | `attractor-neon-1778729737123.png` | Neon | 2026-05-13 | Offset central, forma X convergente |
+| 3 | ![preview](images/attractor-mono-1778729752247.png) | `attractor-mono-1778729752247.png` | Mono | 2026-05-13 | Variante monocromática, alto contraste |
 
 ---
 
-## Outputs
-
-<!-- Adicione novos projetos abaixo -->
-
-### _Exemplo
-
-| # | Preview | Arquivo | Data | Notas |
-|---|---------|---------|------|-------|
-| — | — | — | — | Template de exemplo — apague ao criar o primeiro registro |
-
----
-
-> **Dica:** Use nomes descritivos nos arquivos, ex: `flow-field-v3-seed42.png`
+> **Dica:** Use nomes descritivos nos arquivos, ex: `attractor-neon-seed42.png`
