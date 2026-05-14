@@ -1,63 +1,46 @@
-# 🎨 Generative Art Gallery
+# Generative Art Gallery
 
-Coleção de mini-projetos de arte generativa usando HTML, CSS e JavaScript.
+A personal playground for experimenting with generative art algorithms — pattern exploration, procedural compositions, and visual experiments that feed into my design work.
 
-Cada projeto explora um padrão ou algoritmo diferente para criação de arte procedural.
+Built with vanilla HTML, CSS, and JavaScript. No frameworks. Just math, pixels, and code.
 
-## 📁 Estrutura
+---
 
-```
-generative-art-gallery/
-├── projects/                    # Mini-projetos de arte generativa
-│   └── _template/               # Template para novos projetos
-├── common/                      # Componentes reutilizáveis
-│   ├── css/                     # Estilos compartilhados
-│   │   └── base.css             # Reset + variáveis globais
-│   ├── js/                      # Scripts compartilhados
-│   │   ├── download.js          # Utilitário para salvar canvas como imagem
-│   │   └── ui.js                # Componentes de UI (botões, controles)
-│   └── components/              # Componentes HTML reutilizáveis
-│       └── controls-panel.html  # Painel de controles padrão
-├── output/                      # Resultados exportados
-│   ├── images/                  # Imagens geradas (.png, .jpg)
-│   └── videos/                  # Vídeos/GIFs exportados
-└── README.md
-```
+## Examples
 
-## 🚀 Como usar
+<p align="center">
+  <img src="output/videos/09959a0c4f6c430e45dca4361fe912ab.gif" alt="Attractor animation" width="400">
+</p>
 
-### Criar um novo projeto
+<p align="center">
+  <img src="output/images/attractor-neon-1778729737123.png" alt="Attractor — Neon palette" width="280">
+  <img src="output/images/attractor-neon-1778729707122.png" alt="Attractor — Neon variant" width="280">
+  <img src="output/images/attractor-mono-1778729752247.png" alt="Attractor — Mono palette" width="280">
+</p>
 
-1. Copie a pasta `projects/_template/` e renomeie
-2. Edite o `index.html` do seu novo projeto
-3. Os componentes comuns já estão linkados no template
+---
 
-### Componentes disponíveis
+## Projects
 
-- **`common/js/download.js`** — Função para baixar o canvas em alta resolução (até 4K)
-- **`common/js/ui.js`** — Botões estilizados e painel de controles
-- **`common/css/base.css`** — Reset CSS + variáveis de design + tema escuro
+| Project | Description |
+|---------|-------------|
+| [Attractor](projects/attractor/) | Additive blending of dashed Bézier curves with LUT colorization. Based on Chris Mccully's work. |
+| _template | Starter template for new experiments |
 
-### Salvar resultados
+---
 
-Use o botão "Salvar Imagem" no painel de controles, ou chame:
+## 📖 The Book — *Coming Soon*
 
-```js
-import { downloadCanvas } from '../../common/js/download.js';
-downloadCanvas(canvas, 'minha-arte', 4096); // nome, resolução
-```
+This repository is one of the playgrounds for my upcoming book on generative art and algorithmic design. The book explores the intersection of code, mathematics, and visual creativity — documenting patterns, techniques, and the creative process behind procedural art.
 
-## 📝 Projetos
+**Status:** Work in progress 🚧
 
-| # | Nome | Descrição | Preview |
-|---|------|-----------|---------|
-| — | _template | Template base para novos projetos | — |
+---
 
-> Atualize esta tabela conforme criar novos projetos!
+## Authorship & License
 
-## 🛠️ Tecnologias
+All artworks, code, and visual outputs in this repository are original creations by **Gabriel Baiano**.
 
-- HTML5 Canvas / SVG
-- JavaScript (ES Modules)
-- CSS3
-- Sem frameworks — tudo vanilla para máxima flexibilidade
+The source code is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code. The generated artworks remain under the authorship of their creator.
+
+© 2026 Gabriel Baiano
