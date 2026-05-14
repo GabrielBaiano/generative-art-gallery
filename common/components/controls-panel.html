@@ -1,0 +1,48 @@
+<!--
+  Controls Panel Component
+  ========================
+  Painel de controles pronto para ser incluído em qualquer projeto.
+  
+  Uso como referência — na prática, use os componentes JS de `common/js/ui.js`
+  que criam o painel programaticamente com mais flexibilidade.
+  
+  Para incluir diretamente no HTML:
+  1. Copie este bloco para o body do seu index.html
+  2. Customize os controles conforme necessário
+-->
+
+<div class="gen-panel gen-panel--top-right" id="controls-panel">
+  <div class="gen-panel__header">
+    <h3 class="gen-panel__title">Controles</h3>
+    <button class="gen-panel__toggle" onclick="
+      const c = this.closest('.gen-panel').querySelector('.gen-panel__content');
+      const hidden = c.style.display === 'none';
+      c.style.display = hidden ? '' : 'none';
+      this.textContent = hidden ? '−' : '+';
+    ">−</button>
+  </div>
+  <div class="gen-panel__content">
+
+    <!-- Slider exemplo -->
+    <div class="gen-slider">
+      <label class="gen-slider__label">
+        <span>Parâmetro</span>
+        <span class="gen-slider__value">50</span>
+      </label>
+      <input type="range" class="gen-slider__input" 
+             min="0" max="100" value="50"
+             oninput="this.previousElementSibling.querySelector('.gen-slider__value').textContent = this.value">
+    </div>
+
+    <hr class="gen-separator">
+
+    <!-- Botões -->
+    <button class="gen-btn gen-btn--secondary" id="btn-save">
+      <span class="gen-btn__icon">💾</span> Salvar Imagem
+    </button>
+    <button class="gen-btn gen-btn--primary" id="btn-save-hd">
+      <span class="gen-btn__icon">🖼️</span> Salvar HD (4K)
+    </button>
+
+  </div>
+</div>

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Output files (opcionalmente rastreie alguns)
+# Descomente a linha abaixo se não quiser versionar os outputs
+# output/
+
+# Temp
+*.tmp
+*.log
