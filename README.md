@@ -7,7 +7,7 @@ Built with vanilla HTML, CSS, and JavaScript. No frameworks. Just math, pixels, 
 
 <p align="center">
   <img src="output/videos/09959a0c4f6c430e45dca4361fe912ab.gif" alt="Attractor animation" width="400">
-</p>s
+</p>
 
 ---
 
