@@ -3,23 +3,20 @@
 This is my personal playground for experimenting with generative art algorithms — pattern exploration, procedural compositions, and visual experiments that feed into my design work.
 
 Built with vanilla HTML, CSS, and JavaScript. No frameworks. Just math, pixels, and code.
-
 ---
 
 <p align="center">
   <img src="output/videos/09959a0c4f6c430e45dca4361fe912ab.gif" alt="Attractor animation" width="400">
-</p>
+</p>s
 
 ---
 
 ## Projects
 
-| Project | Breakdown | Description |
-|---------|-----------|-------------|
-| [Attractor](projects/attractor/) | [📄 Algorithm & Concepts](projects/attractor/BREAKDOWN.md) | Additive blending of dashed Bézier curves with LUT colorization. Based on Chris Mccully's work. |
-| _template | — | Starter template for new experiments |
-
-📸 **[Output Catalog](output/CATALOGO.md)** — all generated artworks organized by project, name, and date.
+| Project | Description |
+|---------|-------------|
+| [Attractor](projects/attractor/) | Additive blending of dashed Bézier curves with LUT colorization. Based on Chris Mccully's work. |
+| _template | Starter template for new experiments |
 
 ---
 
