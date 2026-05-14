@@ -1,31 +1,25 @@
 # Generative Art Gallery
 
-A personal playground for experimenting with generative art algorithms — pattern exploration, procedural compositions, and visual experiments that feed into my design work.
+This is my personal playground for experimenting with generative art algorithms — pattern exploration, procedural compositions, and visual experiments that feed into my design work.
 
 Built with vanilla HTML, CSS, and JavaScript. No frameworks. Just math, pixels, and code.
 
 ---
 
-## Examples
-
 <p align="center">
   <img src="output/videos/09959a0c4f6c430e45dca4361fe912ab.gif" alt="Attractor animation" width="400">
-</p>
-
-<p align="center">
-  <img src="output/images/attractor-neon-1778729737123.png" alt="Attractor — Neon palette" width="280">
-  <img src="output/images/attractor-neon-1778729707122.png" alt="Attractor — Neon variant" width="280">
-  <img src="output/images/attractor-mono-1778729752247.png" alt="Attractor — Mono palette" width="280">
 </p>
 
 ---
 
 ## Projects
 
-| Project | Description |
-|---------|-------------|
-| [Attractor](projects/attractor/) | Additive blending of dashed Bézier curves with LUT colorization. Based on Chris Mccully's work. |
-| _template | Starter template for new experiments |
+| Project | Breakdown | Description |
+|---------|-----------|-------------|
+| [Attractor](projects/attractor/) | [📄 Algorithm & Concepts](projects/attractor/BREAKDOWN.md) | Additive blending of dashed Bézier curves with LUT colorization. Based on Chris Mccully's work. |
+| _template | — | Starter template for new experiments |
+
+📸 **[Output Catalog](output/CATALOGO.md)** — all generated artworks organized by project, name, and date.
 
 ---
 
